@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .login{
+    display: flex;
+    align-content: stretch;
+    justify-content: space-around;
+    height: 1000px;
+}
+           
+          
+        
+        #user{
+            border:none;
+            text-align: center;
+            font-size: 15px;
+            /* background:linear-gradient(57deg,rgb(217 90 18) 12%,#89ab4c 14%);
+             */
+             background: none;
+            outline: none;
+        }
+        #pass{
+            border: none;
+            margin-left: 10px;
+            font-size: 15px;
+            background: none;
+            
+            /* background:linear-gradient(57deg,rgb(217 90 18) 36%,#89ab4c 14%); */
+            outline: none;
+        }
+        a{
+            text-align: right;
+            margin-left: 200px;
+            text-decoration: none;
+        }
+        hr{
+            width: 300px;
+        
+        }
+        #btn{
+            text-align: center;
+            /* background-color:#33FDFF ; */
+            border-radius: 20px;
+            width: 280px;
+            font-weight: bold;
+            margin-left: 48px;
+            margin-bottom: 20px;
+            height: 40px;
+            font-size: 25px;
+            background: none;
+            /* background: linear-gradient(65deg, rgb(217 90 18) 55%, #89ab4c 50% ); */
+            /* background-image: linear-gradient(to bottom, #33475b, #0033CC, #FF77CC, rgb(255, 122, 89)); */
+             /* background: repeating-linear-gradient(120deg,yellow 30%,green 30% 40%, gray 35%); */
+
+        }
+        #btn:hover{
+            /* background: linear-gradient(65deg, rgb(217 90 18) 55%, #89ab4c 50% ); */
+            color: whitesmoke;
+            height: 40px;
+            font-size: 25px;
+            width: 280px;
+        }
+        /* h1{
+            text-align: center;
+            color: linear-gradient(yellow ,green,blue);
+            
+            /* background: linear-gradient(yellow ,green,blue); */
+            /* text-decoration:linear-gradient(yellow ,green,blue) ; */
+
+            
+        
+        #heading{
+            margin-left:45px ;
+            font-weight: bold;
+        }
+        .InLogin{
+            position:absolute;
+            background-color: whitesmoke;
+            width: 410px;
+            margin-top:10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            box-shadow:4px 4px 4px 4px#a0efef ;
+            background: linear-gradient(60deg, rgb(217 90 18) 50%, #89ab4c 50% );
+            position: fixed;
+            height: 650px;
+           
+
+           
+        }
+        .img{
+            margin-left:100px;
+            margin-top: 10px ;
+            margin-bottom: 20px;
+            padding-right:20px;
+        }
+        #c{
+            margin-left:45px ;
+        }
+        .poli{
+            display: flex;
+            width: 400px;
+            margin-top: 15px;
+            /* background: linear-gradient(blue , gray ,green); */
+            /* clip-path: tringle(20px 30px 30px);
+            */
+            
+        }
+        
+    </style>
+</head>
+<body bgcolor="green">
+    
+    <div>
+    <div class="login">
+        <div class="InLogin">
+            <div class="poli">
+                <div style="text-align: center; background-color: rgb(217 90 18); padding: 0px 72px 5px 93px;font-size:40px;font-weight:bold;clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);">Login</div>
+                <!-- <div style="font-size:40px;font-weight:bold; padding-left:100px ;">Login</div> -->
+            </div>
+            
+            <form action="" name="form" onsubmit="return sub()">
+            
+          <p id="heading"> Username</p>
+          <br>
+           <img id="c" src="https://www.freeiconspng.com/uploads/contact-icon-20.png" width="20px" height="20px">
+           <input type="text" id="user" placeholder="Type your username">
+           <hr>
+           <p id="heading">Password</p><br>
+           <img id="c" src="https://img.favpng.com/14/10/23/lock-computer-icons-png-favpng-5UyRH8tFup9P4DdAsedMhUC8z.jpg" width="20px" height="20px">
+           <input type="text" id="pass" placeholder="Type your password">
+           <hr>
+           <br>
+           <a href="">forgot password?</a>
+           <br>
+           <br>
+          <button type="submit" value="Login" id="btn">Login</button>
+          <br>
+          <p style="text-align: center;">Or Sign Up Using</p>
+          <br>
+          <div class="img">
+              <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Facebook_Logo.png" width="60px" height="60px"> -->
+  
+              <!-- <img src="https://seeklogo.com/images/T/twitter-icon-circle-blue-logo-0902F48837-seeklogo.com.png" width="60px" height="60px"> -->
+  
+              <!-- <img src="https://www.raqnbeauty.com/wp-content/uploads/2020/06/google-logo-png-google-icon-logo-png-transparent-svg-vector-bie-supply-14.png" width="60px" height="60px"> -->
+                  
+          </div>
+          <div class="sing" style="margin-top:40px; margin-bottom: 20px;">
+              <p style="text-align: center;">
+                  or Sign Up Using
+              </p>
+              <p style="text-align: center;">  SIGN UP
+              </p>
+            <p style="color: white; text-shadow: 2px 2px blue; margin-left: 3rem; font-weight: bold;">Created By Ajay kumar</p>
+               
+        </div>
+    </form>
+
+        </div>
+        <script>
+            function sub(){
+                var a=document.getElementById("user").value;
+                var b=document.getElementById("pass").value;
+                if(a=="" || a=="null"){
+                    alert("User Name can't be blank !");
+                }
+               else if(b=="" || b.length>=6){
+                    alert("Password can't be blank! \n Password should be Atleast 6 character or digit ");
+                }
+
+            }
+        </script>
+    </div> 
+    </div>
+</body>
+</html>
